@@ -39,6 +39,9 @@ export const NavLinkName = styled(Link)`
   cursor: pointer;
 `;
 
+export const LinkButton = styled(Link)`
+`;
+
 export const Bars = styled(FaBars)`
   display: none;
   color: #fff;
