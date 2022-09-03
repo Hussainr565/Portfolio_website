@@ -2,6 +2,11 @@ import styled from "styled-components";
 import Button from "@mui/material/Button";
 
 export const NavButton = styled(Button)`
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   height: 50%;
   width: auto;
   top: 20%;

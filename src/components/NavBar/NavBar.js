@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useContext } from "react";
 import {
   Nav,
   NavLink,
@@ -12,16 +12,18 @@ import {
 } from "./NavbarElements";
 import "./Navbar.css";
 import CVButton from "../Button/Button";
+import ToggleIconButton from "../ToggleIcon/ToggleIconButton";
 
 const Navbar = (props) => {
+
   return (
     <>
-      <Nav>
+      <Nav >
         <Bars />
-        <NavLinkName to="/" exact>
+        <NavLinkName className="underline" to="/" exact>
           <span>Syed Hussain Raza</span>
         </NavLinkName>
-        <NavMenu>
+        <NavMenu className="underline">
           <NavLink to="/about" activeStyle>
             <Text>About</Text>
           </NavLink>
@@ -34,11 +36,22 @@ const Navbar = (props) => {
           <NavLink to="/sign-up" activeStyle>
             <Text>Sign Up</Text>
           </NavLink>
+          
         </NavMenu>
-        <CVButton color="#444444"  />
-        <LinkButton to="/files/Syed_Hussain_Raza_Resume.pdf" target="_blank" download>
-          <CVButton color="#444444" onClicked={props.onClicked} theme={props.theme} />
+        
+        <LinkButton
+          to="/files/Syed_Hussain_Raza_Resume.pdf"
+          target="_blank"
+          download
+        >
+          <CVButton
+            color="#444444"
+            onClicked={props.onClicked}
+            theme={props.theme}
+            text="Download CV"
+          />
         </LinkButton>
+        <ToggleIconButton color="#EDEDED" />
       </Nav>
     </>
   );

@@ -26,10 +26,11 @@ span::after {
     transition: all 0.3s linear;
   }
   
-span:hover::after {
+ .underline span:hover::after {
     left: 0;
     width: 100%;
   }
+  
 
 .active span::after {
     display: block;

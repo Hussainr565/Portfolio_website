@@ -65,7 +65,6 @@ const App = () => {
       </Router>
       </ThemeContext.Provider>
     </ThemeProvider>
-    
   );
 };
 
