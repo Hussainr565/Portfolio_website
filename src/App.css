@@ -1,3 +1,7 @@
-div {
-    background-color: black;
+#light {
+    background-color: "#EDEDED";
+}
+
+#dark {
+    background-color: "#171717";
 }

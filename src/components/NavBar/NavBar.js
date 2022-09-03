@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Nav,
   NavLink,
@@ -13,7 +13,7 @@ import {
 import "./Navbar.css";
 import CVButton from "../Button/Button";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <>
       <Nav>
@@ -35,8 +35,9 @@ const Navbar = () => {
             <Text>Sign Up</Text>
           </NavLink>
         </NavMenu>
+        <CVButton color="#444444"  />
         <LinkButton to="/files/Syed_Hussain_Raza_Resume.pdf" target="_blank" download>
-          <CVButton color="#444444"  />
+          <CVButton color="#444444" onClicked={props.onClicked} theme={props.theme} />
         </LinkButton>
       </Nav>
     </>
